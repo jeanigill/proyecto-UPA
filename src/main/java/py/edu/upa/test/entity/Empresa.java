@@ -23,6 +23,9 @@ public class Empresa implements Serializable {
 	private String  ruc;
 	private String nombre;
 	
+	public Empresa () {
+		
+	}
 	
 	public Integer getId() {
 		return id;
