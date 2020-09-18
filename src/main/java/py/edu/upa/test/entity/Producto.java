@@ -31,7 +31,6 @@ public class Producto implements Serializable {
 	
 	private String descripcion;
 
-
 	private Boolean favorito;
 	private Boolean oferta;
 	
@@ -41,16 +40,21 @@ public class Producto implements Serializable {
 	//JOINS (EN BD)	
 	@ManyToOne
 	@JoinColumn(name="id_categoria")
-	private Producto categoria;
+	private Categoria categoria;
 	
 	@ManyToOne
 	@JoinColumn(name="id_1")
-	private Producto proveedor;
+	private Proveedor proveedor;
 	
 	@ManyToOne
 	@JoinColumn(name="id_2")
-	private Producto empresa;
-
+	private Empresa empresa;
+	
+	//CONSTRUCTOR
+	public Producto () {
+		
+	}
+	
 	//GETTERS Y SETTERS
 	public Integer getId() {
 		return id;
@@ -116,28 +120,28 @@ public class Producto implements Serializable {
 		this.cantidadStock = cantidadStock;
 	}
 
-	public Producto getCategoria() {
+	public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(Producto categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 
-	public Producto getProveedor() {
+	public Proveedor getProveedor() {
 		return proveedor;
 	}
 
-	public void setProveedor(Producto proveedor) {
+	public void setProveedor(Proveedor proveedor) {
 		this.proveedor = proveedor;
 	}
 
-	public Producto getEmpresa() {
+	public Empresa getEmpresa() {
 		return empresa;
 	}
 
-	public void setEmpresa(Producto empresa) {
+	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
 	}
-
+	
 }
