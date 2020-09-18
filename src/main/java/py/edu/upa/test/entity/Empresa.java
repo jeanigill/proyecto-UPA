@@ -20,7 +20,7 @@ public class Empresa implements Serializable {
 	
 	//Variables 
 	private Integer id;
-	private Integer ruc;
+	private String  ruc;
 	private String nombre;
 	
 	
@@ -30,10 +30,10 @@ public class Empresa implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getRuc() {
+	public String getRuc() {
 		return ruc;
 	}
-	public void setRuc(Integer ruc) {
+	public void setRuc(String ruc) {
 		this.ruc = ruc;
 	}
 	public String getNombre() {
@@ -42,5 +42,8 @@ public class Empresa implements Serializable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	
+	
 	
 }
