@@ -28,7 +28,7 @@ public class Producto implements Serializable {
 	@Column(name="precio_unitario")
 	private Integer precioUnitario;
 	
-	private String description;
+	private String descripcion;
 
 
 	private Boolean favorito;
@@ -83,12 +83,12 @@ public class Producto implements Serializable {
 		this.precioUnitario = precioUnitario;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getDescripcion() {
+		return descripcion;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	public Boolean getFavorito() {
