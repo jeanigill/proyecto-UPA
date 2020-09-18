@@ -20,13 +20,16 @@ public class Proveedor implements Serializable {
 	//VARIABLES
 	private Integer id;
 	private String ci;
-
 	private String nombre;
 	private String direccion;
 	private String representante;
 	private String email;
 
 	private Boolean contratado;
+	
+	public Proveedor () {
+		
+	}
 	
 	//GETTERS Y SETTERS
 	public Integer getId() {
