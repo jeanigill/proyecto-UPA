@@ -1,6 +1,7 @@
 package py.edu.upa.test.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,7 +27,7 @@ public class Producto implements Serializable {
 	private String nombre;
 
 	@Column(name="precio_unitario")
-	private Integer precioUnitario;
+	private BigDecimal precioUnitario;
 	
 	private String descripcion;
 
@@ -75,11 +76,11 @@ public class Producto implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public Integer getPrecioUnitario() {
+	public BigDecimal getPrecioUnitario() {
 		return precioUnitario;
 	}
 
-	public void setPrecioUnitario(Integer precioUnitario) {
+	public void setPrecioUnitario(BigDecimal precioUnitario) {
 		this.precioUnitario = precioUnitario;
 	}
 
