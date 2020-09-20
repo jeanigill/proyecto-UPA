@@ -90,11 +90,10 @@ public class ProductoDAO {
 		entityManager.merge(p);
 	}	
 		
-	//Obtener lista de productos paginadas
-	
+	//Obtener lista de productos paginadas	
 	/**
-	 * @param id_type //NO SÉ CUAL PONER
-	 * @return lista de tareas //NO SE CUAL PONER
+	 * @param id
+	 * @return lista de productos
 	 */	
 	@SuppressWarnings("unchecked")
 	public List<Producto> findWithPagination(Integer page, Integer size) {
