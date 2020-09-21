@@ -23,12 +23,9 @@ public class ProveedorDAO {
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Proveedor.class);
 		
-		criteria.add(Restrictions.and(
-				Restrictions.ilike("description", filter),
-				Restrictions.or(
-						Restrictions.eq("deleted", false),
-						Restrictions.isNull("deleted")
-				)));
+		criteria.add(
+				Restrictions.ilike("description", filter)
+				);
 		
 		return criteria.list();
 
@@ -40,10 +37,6 @@ public class ProveedorDAO {
 
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Proveedor.class);
-		
-		criteria.add(Restrictions.or(
-				Restrictions.eq("deleted", false),
-				Restrictions.isNull("deleted")));
 		
 		return criteria.list();
 
@@ -84,7 +77,7 @@ public class ProveedorDAO {
 		entityManager.merge(p);
 	}	
 		
-	//Obtener lista de productos paginadas
+	//Obtener lista de proveedores paginadas
 	
 	/**
 	 * @param id_proveedor
