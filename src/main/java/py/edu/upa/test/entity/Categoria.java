@@ -18,7 +18,8 @@ public class Categoria implements Serializable {
 
 	public Categoria() {
 	}
-
+//getters and setters
+	
 	public Integer getId() {
 		return id;
 	}
