@@ -7,7 +7,6 @@ import javax.inject.Inject;
 
 import py.edu.upa.test.dao.CategoriaDAO;
 import py.edu.upa.test.entity.Categoria;
-import py.edu.upa.test.entity.Producto;
 
 
 @Stateless
@@ -40,7 +39,7 @@ public class CategoriaBC {
 	public List<Categoria> getWithFilter(String filter) {
 		return dao.findWithFilter(filter);
 	}
-	//Paginación
+	//PaginaciÃ³n
 		//public List<Categoria> getPaginatedTasks(Integer page, Integer size){
 			//return dao.findWithPagination(page, size);
 //}
