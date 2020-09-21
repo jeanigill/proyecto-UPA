@@ -123,7 +123,7 @@ public class CategoriaService {
 					 .build();
 		 }
 	 }
-/*	//PARA PAGINACIÓN
+/*	//PARA PAGINACIÃ“N
 	 //http://localhost:8080/ws/rest/tasks/pagination?page=X&size=X
 	 @GET
 	 @Path("/pagination")
@@ -137,6 +137,7 @@ public class CategoriaService {
 					.entity("ERROR_GENERICO")
 					.build();
 		}
+	 }
 	 }
  */	
 }
