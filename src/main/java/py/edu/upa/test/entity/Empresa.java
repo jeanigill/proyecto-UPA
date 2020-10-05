@@ -22,11 +22,57 @@ public class Empresa implements Serializable {
 	private Integer id;
 	private String  ruc;
 	private String nombre;
+	private Integer telefono;
+	private String email;
+	private String ciudad;
+	private String pais;
+	
 	
 	public Empresa () {
 		
 	}
 	
+	
+	public Integer getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(Integer telefono) {
+		this.telefono = telefono;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
+
+	public String getPais() {
+		return pais;
+	}
+
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+
 	public Integer getId() {
 		return id;
 	}

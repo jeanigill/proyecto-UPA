@@ -27,11 +27,7 @@ public class EmpresaDAO {
 
 			Session session = (Session) entityManager.getDelegate();
 			Criteria criteria = session.createCriteria(Empresa.class);
-			
-			criteria.add(Restrictions.or(
-					Restrictions.eq("deleted", false),
-					Restrictions.isNull("deleted")));
-			
+						
 			return criteria.list();
 
 		}
