@@ -15,6 +15,8 @@ public class Categoria implements Serializable {
 	private Integer id;
 
 	private String nombre;
+	
+	private String url;
 
 	public Categoria() {
 	}
@@ -22,6 +24,14 @@ public class Categoria implements Serializable {
 	
 	public Integer getId() {
 		return id;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public void setId(Integer id) {
