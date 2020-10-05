@@ -34,6 +34,7 @@ public class Producto implements Serializable {
 	private Boolean favorito;
 	private Boolean oferta;
 	
+
 	@Column(name="cantidad_stock")
 	private Integer cantidadStock;
 	
@@ -50,12 +51,24 @@ public class Producto implements Serializable {
 	@JoinColumn(name="id_2")
 	private Empresa empresa;
 	
+	private String url;
+	
+	
+
 	//CONSTRUCTOR
 	public Producto () {
 		
 	}
 	
 	//GETTERS Y SETTERS
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	
 	public Integer getId() {
 		return id;
 	}
