@@ -24,13 +24,6 @@ public class ProductoDAO {
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Producto.class);
 		
-		criteria.add(Restrictions.and(
-				Restrictions.ilike("description", filter),
-				Restrictions.or(
-						Restrictions.eq("deleted", false),
-						Restrictions.isNull("deleted")
-				)));
-		
 		return criteria.list();
 
 	}
@@ -41,10 +34,6 @@ public class ProductoDAO {
 
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Producto.class);
-		
-		criteria.add(Restrictions.or(
-				Restrictions.eq("deleted", false),
-				Restrictions.isNull("deleted")));
 		
 		return criteria.list();
 
@@ -104,11 +93,6 @@ public class ProductoDAO {
 
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Producto.class);
-				
-		criteria.add(
-				Restrictions.or(
-						Restrictions.eq("deleted", false),
-						Restrictions.isNull("deleted")));
 		
 		//Asignar Registro de inicio
 		criteria.setFirstResult(registroInicio);
