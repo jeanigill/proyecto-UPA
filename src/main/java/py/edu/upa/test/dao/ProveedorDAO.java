@@ -93,10 +93,6 @@ public class ProveedorDAO {
 		Session session = (Session) entityManager.getDelegate();
 		Criteria criteria = session.createCriteria(Proveedor.class);
 				
-		criteria.add(
-				Restrictions.or(
-						Restrictions.eq("deleted", false),
-						Restrictions.isNull("deleted")));
 		
 		//Asignar Registro de inicio
 		criteria.setFirstResult(registroInicio);
