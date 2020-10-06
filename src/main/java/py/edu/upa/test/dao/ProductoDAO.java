@@ -53,6 +53,12 @@ public class ProductoDAO {
 	
 	//Insertar (cargar) un nuevo producto
 	public void insert(Producto p){
+		if (p.getOferta() == null) {
+			p.setOferta(false);
+		}
+		if (p.getFavorito() == null) {
+			p.setFavorito(false);
+		}
 		entityManager.persist(p);
 	}
 	
@@ -64,12 +70,18 @@ public class ProductoDAO {
 		p.setNombre(producto.getNombre());
 		p.setPrecioUnitario(producto.getPrecioUnitario());
 		p.setDescripcion(producto.getDescripcion());
-		p.setFavorito(producto.getFavorito());
-		p.setOferta(producto.getOferta());
+		//p.setFavorito(producto.getFavorito());
+		if (producto.getOferta() == null) {
+			p.setOferta(false);
+		}
+		if (producto.getFavorito() == null) {
+			p.setFavorito(false);
+		}
+		//p.setOferta(producto.getOferta());
 		p.setCantidadStock(producto.getCantidadStock());
 		p.setCategoria(producto.getCategoria());		
 		p.setProveedor(producto.getProveedor());
-		p.setEmpresa(producto.getEmpresa());
+		//p.setEmpresa(producto.getEmpresa());
 		entityManager.merge(p);
 	}
 	
