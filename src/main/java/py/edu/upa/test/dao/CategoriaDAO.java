@@ -67,7 +67,7 @@ public class CategoriaDAO {
 	//Eliminar categoria
 	public void delete(Integer id){
 		Categoria c = findById(id);
-		entityManager.remove(c);
+		entityManager.merge(c);
 	}
 	//Obtener lista de categorias paginadas	
 		/**
