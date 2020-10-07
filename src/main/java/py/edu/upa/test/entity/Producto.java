@@ -47,9 +47,9 @@ public class Producto implements Serializable {
 	@JoinColumn(name="id_1")
 	private Proveedor proveedor;
 	
-//	@ManyToOne
-//	@JoinColumn(name="id_2")
-//	private Empresa empresa;
+	@ManyToOne
+	@JoinColumn(name="id_2")
+	private Empresa empresa;
 	
 	private String url;
 	
@@ -149,12 +149,12 @@ public class Producto implements Serializable {
 		this.proveedor = proveedor;
 	}
 
-//	public Empresa getEmpresa() {
-//		return empresa;
-//	}
-//
-//	public void setEmpresa(Empresa empresa) {
-//		this.empresa = empresa;
-//	}
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
+	}
 	
 }

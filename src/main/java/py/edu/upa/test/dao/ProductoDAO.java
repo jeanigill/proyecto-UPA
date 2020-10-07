@@ -81,14 +81,15 @@ public class ProductoDAO {
 		p.setCantidadStock(producto.getCantidadStock());
 		p.setCategoria(producto.getCategoria());		
 		p.setProveedor(producto.getProveedor());
-		//p.setEmpresa(producto.getEmpresa());
+		p.setEmpresa(producto.getEmpresa());
+		p.setUrl(producto.getUrl());
 		entityManager.merge(p);
 	}
 	
 	//Eliminar un producto del catálogo
 	public void delete(Integer id){
 		Producto p = findById(id);
-		entityManager.merge(p);
+		entityManager.remove(p);
 	}	
 		
 	//Obtener lista de productos paginadas	
