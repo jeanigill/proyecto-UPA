@@ -62,12 +62,13 @@ public class CategoriaDAO {
 	public void update(Integer id, Categoria categoria){
 		Categoria c = findById(id);
 		c.setNombre(categoria.getNombre());
+		c.setUrl(categoria.getUrl());
 		entityManager.merge(c);
 	}
 	//Eliminar categoria
 	public void delete(Integer id){
 		Categoria c = findById(id);
-		entityManager.merge(c);
+		entityManager.remove(c);
 	}
 	//Obtener lista de categorias paginadas	
 		/**
